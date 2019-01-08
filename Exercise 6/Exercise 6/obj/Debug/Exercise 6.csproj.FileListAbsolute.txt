@@ -1,0 +1,7 @@
+c:\users\seth  rudisill\source\repos\Exercise 6\Exercise 6\bin\Debug\Exercise 6.exe.config
+c:\users\seth  rudisill\source\repos\Exercise 6\Exercise 6\bin\Debug\Exercise 6.exe
+c:\users\seth  rudisill\source\repos\Exercise 6\Exercise 6\bin\Debug\Exercise 6.pdb
+c:\users\seth  rudisill\source\repos\Exercise 6\Exercise 6\obj\Debug\Exercise 6.csprojResolveAssemblyReference.cache
+c:\users\seth  rudisill\source\repos\Exercise 6\Exercise 6\obj\Debug\Exercise 6.csproj.CoreCompileInputs.cache
+c:\users\seth  rudisill\source\repos\Exercise 6\Exercise 6\obj\Debug\Exercise 6.exe
+c:\users\seth  rudisill\source\repos\Exercise 6\Exercise 6\obj\Debug\Exercise 6.pdb
