@@ -12,14 +12,14 @@ namespace Exercise_1
         {
             bool run = true;
             bool go = true;
-            string[] clothingBrands = new string[20] { "Gap", "Nike", "Levi", "Gucci", "Adidas", "Lee", "Diesel", "Calvin Klein", "Prada", "Armani", "Under Armour", "Abercrombee & Fitch", "H & M", "Vans", "Hollister", "Supreme", "Champion", "Timberland", "Puma", "Converse" };
-            string[] backup = new string[20] { "Gap", "Nike", "Levi", "Gucci", "Adidas", "Lee", "Diesel", "Calvin Klein", "Prada", "Armani", "Under Armour", "Abercrombee & Fitch", "H & M", "Vans", "Hollister", "Supreme", "Champion", "Timberland", "Puma", "Converse" };
+            string[] coffeeBrands = new string[20] { "Folgers", "Maxwell House", "Eight O'Clock", "Nescafe", "Chock full o' Nuts", "Milestone Coffee", "Tossimo", "Jacobs", "Sanka", "Kenco", "MJB", "Mr. Brown", "Boss Coffee", "Georgia", "Moccana", "Nabob", "Senseo", "Highpoint", "Red Circle", "State House" };
+            string[] backup = new string[20] { "Folgers", "Maxwell House", "Eight O'Clock", "Nescafe", "Chock full o' Nuts", "Milestone Coffee", "Tossimo", "Jacobs", "Sanka", "Kenco", "MJB", "Mr. Brown", "Boss Coffee", "Georgia", "Moccana", "Nabob", "Senseo", "Highpoint", "Red Circle", "State House" };
 
             // This lets the whole thing repeat until the user is done.
             while (go)
             {
                 Console.Clear();
-                Array.ForEach(clothingBrands, x => Console.WriteLine(x));
+                Array.ForEach(coffeeBrands, x => Console.WriteLine(x));
 
                 // This displays the menu.
                 Console.Write("\nWhat would you like to do to the list?\n" +
@@ -55,58 +55,69 @@ namespace Exercise_1
                     case "1":
                         {
                             // This clears the screen of clutter, sorts the list, writes the list out, lets the user know the function is complete, then waits for a key to be pressed.
-                            Console.Clear();
-                            Array.Sort(clothingBrands);
-                            Array.ForEach(clothingBrands, x => Console.WriteLine(x));
-                            Console.Write("\nThe list is now alphabetized, press any key to continue.");
-                            Console.ReadKey();
+                            if (coffeeBrands.Count() == 0)
+                            {
+                                Console.WriteLine("The list is empty.");
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Array.Sort(coffeeBrands);
+                                Array.ForEach(coffeeBrands, x => Console.WriteLine(x));
+                                Console.Write("\nThe list is now alphabetized, press any key to continue.");
+                                Console.ReadKey();
+                            }
                             break;
                         }
                     case "2":
                         {
                             // This does the same as case 1 with the exception of reversing the order after sorting.
-                            Console.Clear();
-                            Array.Sort(clothingBrands);
-                            Array.Reverse(clothingBrands);
-                            Array.ForEach(clothingBrands, x => Console.WriteLine(x));
-                            Console.Write("\nThe list is now alphabetized in reverse, press any key to continue.");
-                            Console.ReadKey();
+                            if (coffeeBrands.Count() == 0)
+                            {
+                                Console.WriteLine("The list is empty.");
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Array.Sort(coffeeBrands);
+                                Array.Reverse(coffeeBrands);
+                                Array.ForEach(coffeeBrands, x => Console.WriteLine(x));
+                                Console.Write("\nThe list is now alphabetized in reverse, press any key to continue.");
+                                Console.ReadKey();
+                            }
                             break;
                         }
                     case "3":
                         {
                             // This generates a number between the avalible numbers, then deletes the entry at that number, displays what is left, then repeats until all entries are deleted.
                             Console.Clear();
-                            while (clothingBrands.Count() > 0)
+                            if (coffeeBrands.Count() == 0)
                             {
-                                int rNum = new Random().Next(clothingBrands.Count());
-
-                                List<string> Brands = clothingBrands.ToList();
-                                Brands.RemoveAt(rNum);
-                                clothingBrands = Brands.ToArray();
-
-                                for (int i = 0; i < clothingBrands.Count(); i++)
-                                {
-                                    if (i == clothingBrands.Count() - 1)
-                                    {
-                                        Console.Write(clothingBrands[i] + "\n");
-                                    }
-                                    else
-                                    {
-                                        Console.Write(clothingBrands[i] + ", ");
-                                    }
-                                }
-                                Thread.Sleep(1000);
+                                Console.WriteLine("No list to remove from.");
                             }
-                            Console.Write("\nAll brands have been removed, press any key to continue.");
-                            Console.ReadKey();
+                            else
+                            {
+                                while (coffeeBrands.Count() > 0)
+                                {
+                                    int rNum = new Random().Next(coffeeBrands.Count());
+
+                                    List<string> Brands = coffeeBrands.ToList();
+                                    Console.WriteLine($"{Brands[rNum]} removed");
+                                    Brands.RemoveAt(rNum);
+                                    coffeeBrands = Brands.ToArray();
+
+                                    Thread.Sleep(500);
+                                }
+                                Console.Write("\nAll brands have been removed, press any key to continue.");
+                                Console.ReadKey();
+                            }
                             break;
                         }
                     case "4":
                         {
-                            // This uses an identicl array to recover the clothingBrands array.
+                            // This uses an identical array to recover the clothingBrands array.
                             Console.Clear();
-                            clothingBrands = backup;
+                            coffeeBrands = backup;
                             Console.Write("The brands have been restored, press any key to continue.");
                             Console.ReadKey();
                             break;
