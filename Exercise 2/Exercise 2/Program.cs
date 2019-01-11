@@ -10,22 +10,21 @@ namespace Exercise_2
     {
         static void Main(string[] args)
         {
-            string answer = "Nike";
+            string answer = "Folgers";
             string guess = null;
             int guessCheck = 0;
             int numOfGuesses = 0;
             bool run = true;
             bool go = true;
 
-            string[] hints = new string[] { "A popular clothing brand.", "This brand makes clothes for the lower half of your body.", "This brand is known because of a very popular sport.", "This brand's clothes can be worn day after day.",
-                "Some people collect this brands clothing.", "Everyone wants this brand, on and off the court.", "This brand's shoes sell for a high dollar.", "This brand's shoe is a status symbol.",
-                "This brand is a competitor of Adidas.", "This brand starts with an 'N'." };
+            string[] hints = new string[] { "This is a popular drink brand.", "This drink gives you energy.", "This is a popular coffee brand.", "This brand can be found in just about every home.", "This brand is 'in your cup'.", "This brand has a red container.",
+                "This brand has a sunrise over mountains for a logo.", "This is an Amercian coffee.", "This brand rymes with boulder.", "This brand starts with 'F'." };
 
             // This lets the player know they have 10 guesses and the answer has to begin with a capital letter.
             Console.Write("Let's play a game. A quick note, your answer needs to start with a capital letter." +
                 "\nCan you guess the brand within 10 guesses?");
 
-            // This set up the loop for the game
+            // This sets up the loop for the game
             while (go)
             {
                 run = true;
