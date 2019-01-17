@@ -12,13 +12,13 @@ namespace Exercise_4
         {
             Dictionary<string, List<string>> colorAndFacts = new Dictionary<string, List<string>> { };
 
-            List<string> redFacts = new List<string> { "Red means beautiful in Russian.","The color red doesn't make bulls angry, they are color-blind.","Seeing the color red makes your heart beat faster."};
-            List<string> orangeFacts = new List<string> { "Orange means high in the color-coded threat system.","The blood on the set of Sweeney Todd had to be orange to show up properly in the film.","Orange is the Dutch Royal Family's color."};
-            List<string> yellowFacts = new List<string> { "In Japan, yellow is the color for courage.","In Egypt, yellow is the color of mourning.","Yellow is psychologicaly the happiest color."};
-            List<string> greenFacts = new List<string> { "Green is the second most popular color.","Santa's suit used to be green before Coka-Cola changed it in the 1950s.","The human can distinguish the most shades of the color green."};
-            List<string> blueFacts = new List<string> { "Blue is the color most preferred by men.","Blue is thought to bring bad luck in India.","8% of the world's population have blue eyes."};
-            List<string> indigoFacts = new List<string> { "Indigo is also known as ultramarine.","Indigo originated in India.","Indigo is used in making Royal Purple."};
-            List<string> violetFacts = new List<string> { "Violet isn't part of the visible spectrum, so you can't see it in a rainbow.","Carrots used to be violet.","Dominica is the only nation with violet on its flag."};
+            List<string> redFacts = new List<string> { "Red means beautiful in Russian.                               |","The color red doesn't make bulls angry, they are color-blind. |","Seeing the color red makes your heart beat faster.            |"};
+            List<string> orangeFacts = new List<string> { "Orange means high in the color-coded threat system.                                    |","The blood on the set of Sweeney Todd had to be orange to show up properly in the film. |","Orange is the Dutch Royal Family's color.                                              |"};
+            List<string> yellowFacts = new List<string> { "In Japan, yellow is the color for courage.   |","In Egypt, yellow is the color of mourning.   |","Yellow is psychologicaly the happiest color. |"};
+            List<string> greenFacts = new List<string> { "Green is the second most popular color.                                 |","Santa's suit used to be green before Coka-Cola changed it in the 1950s. |","The human can distinguish the most shades of the color green.           |"};
+            List<string> blueFacts = new List<string> { "Blue is the color most preferred by men.     |","Blue is thought to bring bad luck in India.  |","8% of the world's population have blue eyes. |"};
+            List<string> indigoFacts = new List<string> { "Indigo is also known as ultramarine.   |","Indigo originated in India.            |","Indigo is used in making Royal Purple. |"};
+            List<string> violetFacts = new List<string> { "Violet isn't part of the visible spectrum, so you can't see it in a rainbow. |","Carrots used to be violet.                                                   |","Dominica is the only nation with violet on its flag.                         |"};
             List<string> colors = new List<string> { "red", "orange", "yellow", "green", "blue", "indigo", "violet" };
 
             colorAndFacts.Add(colors[0], redFacts);
@@ -49,8 +49,8 @@ namespace Exercise_4
                 string input = Console.ReadLine().ToLower();
                 int inputCheck = 0;
 
-                // This checks for null, white space, if the input is a number, and if that number falls btween 1 and 8.
-                while (string.IsNullOrWhiteSpace(input) || !int.TryParse(input, out inputCheck) || inputCheck < 1 || inputCheck > 8)
+                // This checks for null, white space, if the input is a number, and if that number falls between 1 and 8.
+                while (string.IsNullOrWhiteSpace(input) || (int.TryParse(input, out inputCheck) && (inputCheck < 1 || inputCheck > 8)))
                 {
                     Console.Write("Invalid selection, please type a color or number. ");
                     input = Console.ReadLine().ToLower();
@@ -64,11 +64,13 @@ namespace Exercise_4
                         {
                             Console.Clear();
                             // This writes the facts for the chosen color.
+                            Console.WriteLine("+--------------------------------------------------------------+");
                             for (int i = 0; i < 3; i++)
                             {
-                                Console.WriteLine(colorAndFacts[colors[0]][i]);
-                                Console.WriteLine("--------------------------------");
+                                Console.WriteLine("|" + colorAndFacts[colors[0]][i]);
+                                Console.WriteLine("+--------------------------------------------------------------+");
                             }
+                            Console.WriteLine("Press any key to continue.");
                             Console.ReadKey();
                             break;
                         }
@@ -77,11 +79,13 @@ namespace Exercise_4
                         {
                             Console.Clear();
                             // This writes the facts for the chosen color.
+                            Console.WriteLine("+---------------------------------------------------------------------------------------+");
                             for (int i = 0; i < 3; i++)
                             {
-                                Console.WriteLine(colorAndFacts[colors[1]][i]);
-                                Console.WriteLine("--------------------------------");
+                                Console.WriteLine("|" + colorAndFacts[colors[1]][i]);
+                                Console.WriteLine("+---------------------------------------------------------------------------------------+");
                             }
+                            Console.WriteLine("Press any key to continue.");
                             Console.ReadKey();
                             break;
                         }
@@ -90,11 +94,13 @@ namespace Exercise_4
                         {
                             Console.Clear();
                             // This writes the facts for the chosen color.
+                            Console.WriteLine("+---------------------------------------------+");
                             for (int i = 0; i < 3; i++)
                             {
-                                Console.WriteLine(colorAndFacts[colors[2]][i]);
-                                Console.WriteLine("--------------------------------");
+                                Console.WriteLine("|" + colorAndFacts[colors[2]][i]);
+                                Console.WriteLine("+---------------------------------------------+");
                             }
+                            Console.WriteLine("Press any key to continue.");
                             Console.ReadKey();
                             break;
                         }
@@ -103,11 +109,13 @@ namespace Exercise_4
                         {
                             Console.Clear();
                             // This writes the facts for the chosen color.
+                            Console.WriteLine("+------------------------------------------------------------------------+");
                             for (int i = 0; i < 3; i++)
                             {
-                                Console.WriteLine(colorAndFacts[colors[3]][i]);
-                                Console.WriteLine("--------------------------------");
+                                Console.WriteLine("|" + colorAndFacts[colors[3]][i]);
+                                Console.WriteLine("+------------------------------------------------------------------------+");
                             }
+                            Console.WriteLine("Press any key to continue.");
                             Console.ReadKey();
                             break;
                         }
@@ -116,11 +124,13 @@ namespace Exercise_4
                         {
                             Console.Clear();
                             // This writes the facts for the chosen color.
+                            Console.WriteLine("+---------------------------------------------+");
                             for (int i = 0; i < 3; i++)
                             {
-                                Console.WriteLine(colorAndFacts[colors[4]][i]);
-                                Console.WriteLine("--------------------------------");
+                                Console.WriteLine("|" + colorAndFacts[colors[4]][i]);
+                                Console.WriteLine("+---------------------------------------------+");
                             }
+                            Console.WriteLine("Press any key to continue.");
                             Console.ReadKey();
                             break;
                         }
@@ -129,11 +139,13 @@ namespace Exercise_4
                         {
                             Console.Clear();
                             // This writes the facts for the chosen color.
+                            Console.WriteLine("+---------------------------------------+");
                             for (int i = 0; i < 3; i++)
                             {
-                                Console.WriteLine(colorAndFacts[colors[5]][i]);
-                                Console.WriteLine("--------------------------------");
+                                Console.WriteLine("|" + colorAndFacts[colors[5]][i]);
+                                Console.WriteLine("+---------------------------------------+");
                             }
+                            Console.WriteLine("Press any key to continue.");
                             Console.ReadKey();
                             break;
                         }
@@ -142,17 +154,49 @@ namespace Exercise_4
                         {
                             Console.Clear();
                             // This writes the facts for the chosen color.
+                            Console.WriteLine("+-----------------------------------------------------------------------------+");
                             for (int i = 0; i < 3; i++)
                             {
-                                Console.WriteLine(colorAndFacts[colors[6]][i]);
-                                Console.WriteLine("--------------------------------");
+                                Console.WriteLine("|" + colorAndFacts[colors[6]][i]);
+                                Console.WriteLine("+-----------------------------------------------------------------------------+");
                             }
+                            Console.WriteLine("Press any key to continue.");
                             Console.ReadKey();
                             break;
                         }
                     case "8":
                     case "exit":
                         {
+                            go = false;
+                            break;
+                        }
+                }
+                // This asks the user if they want to select another color
+                Console.Write("\nWould you like to learn about another color?" +
+                    "\n1. Yes" +
+                    "\n2. No" +
+                    "\nSelection: ");
+                input = Console.ReadLine().ToLower();
+
+                // This checks for null, white space, if the input is a number, and if that number is 1 or 2.
+                while (string.IsNullOrWhiteSpace(input) || (int.TryParse(input, out inputCheck) && (inputCheck < 1 || inputCheck > 2)))
+                {
+                    Console.Write("Invalid selection, please type a yes, no, or number. ");
+                    input = Console.ReadLine().ToLower();
+                }
+
+                // This determines if the loop needs to be turned off
+                switch (input)
+                {
+                    case "1":
+                    case "yes":
+                        {
+                            break;
+                        }
+                    case "2":
+                    case "no":
+                        {
+                            Console.WriteLine("\nGoodbye.");
                             go = false;
                             break;
                         }
