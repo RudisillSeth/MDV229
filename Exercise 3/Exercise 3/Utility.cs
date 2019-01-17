@@ -18,9 +18,10 @@ namespace Exercise_3
                 Console.WriteLine($"Student : {students[i].Getname}");
                 for (int x = 0; x < 5; x++)
                 {
-                    Console.WriteLine($"{students[i].GetClasses[x].ClassName} : {students[i].GetClasses[x].Grade} {GPACheck(students[i].GetClasses[x].Grade)}");
+                    Console.WriteLine("+--------------------------------+");
+                    Console.WriteLine($"|{students[i].GetClasses[x].ClassName} : {students[i].GetClasses[x].Grade} {GPACheck(students[i].GetClasses[x].Grade)}   ");
                 }
-                Console.WriteLine("----------------------------------");
+                Console.WriteLine("+--------------------------------+\n");
             }
         }
 
@@ -53,7 +54,7 @@ namespace Exercise_3
         {
             List<Student> students = stu;
             
-
+            // This takes each student's grades and converts them into the student's GPA
             for (int i = 0; i < 5; i++)
             {
                 double total = 0;
@@ -83,9 +84,11 @@ namespace Exercise_3
 
                     total += gpa;
                 }
-                Console.WriteLine($"Average GPA : {NumtoLetterGPA(total / 5)}");
-                Console.WriteLine("----------------------------------");
+                Console.WriteLine("+----------------+");
+                Console.WriteLine($"|Average GPA : {NumtoLetterGPA(total / 5)} |");
+                Console.WriteLine("+----------------+\n");
             }
+
         }
 
         // Takes the numerical average and change it to a letter GPA

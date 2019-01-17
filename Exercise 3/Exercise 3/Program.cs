@@ -15,15 +15,16 @@ namespace Exercise_3
             bool run = true;
             bool go = true;
 
+
             // This creates a list of classes with grades, then creates a student object to assign that list to.
             for (int i = 0; i < 5; i++)
             {
                 List<Class> classes = new List<Class> { };
                 Class currentclass = null;
-                classes.Add(currentclass = new Class("History of Fashion", 97.32));
-                classes.Add(currentclass = new Class("Trends in Fashion", 82.33));
-                classes.Add(currentclass = new Class("Rise of Brands", 74.98));
-                classes.Add(currentclass = new Class("Art of Branding", 67.45));
+                classes.Add(currentclass = new Class("History of Coffee", 97.32));
+                classes.Add(currentclass = new Class("Flavors of the World", 82.33));
+                classes.Add(currentclass = new Class("Art of the Barista", 74.98));
+                classes.Add(currentclass = new Class("Tools of the Trade", 67.45));
                 classes.Add(currentclass = new Class("Brand Development", 78.62));
 
                 Student currentStudent = null;
@@ -35,7 +36,7 @@ namespace Exercise_3
                 run = true;
                 Console.Clear();
                 // This displays the menu.
-                Console.Write("Welcome Instructor" +
+                Console.Write("\nWelcome Instructor\n" +
                     "\nUse numbers for your selection." +
                     "\n1. Review Students" +
                     "\n2. Review Student GPAs" +
@@ -67,6 +68,7 @@ namespace Exercise_3
                             Console.Clear();
                             // Shows the student, class, grade, and GPA
                             Utility.ShowAll(students);
+                            Console.WriteLine("Press any key to continue.");
                             Console.ReadKey();
                             break;
                         }
@@ -75,6 +77,7 @@ namespace Exercise_3
                             Console.Clear();
                             // Shows the student and their average GPA
                             Utility.AverageGPA(students);
+                            Console.WriteLine("Press any key to continue.");
                             Console.ReadKey();
                             break;
                         }
@@ -92,7 +95,7 @@ namespace Exercise_3
                             string studentChoice = Console.ReadLine();
                             int studentCheck = 0;
 
-                            // Checks if the input is a number and btween 1 and 5
+                            // Checks if the input is a number and between 1 and 5
                             while (run)
                             {
                                 if (string.IsNullOrWhiteSpace(studentChoice) || !int.TryParse(studentChoice, out studentCheck) || studentCheck < 1 || studentCheck > 5)
