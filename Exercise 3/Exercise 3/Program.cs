@@ -85,7 +85,7 @@ namespace Exercise_3
                         {
                             Console.Clear();
                             run = true;
-                            Console.WriteLine("\nWhich student would you like to change grades for?");
+                            Console.WriteLine("\nWhich student would you like to change grades for?\n");
                             // Displays students to choose from
                             for (int i = 0; i < 5; i++)
                             {
@@ -110,7 +110,8 @@ namespace Exercise_3
                             }
 
                             run = true;
-                            Console.WriteLine("\nWhich class would you like to change grades for?");
+                            Console.Clear();
+                            Console.WriteLine("\nWhich class would you like to change grades for?\n");
                             // Displays the chosen students classes
                             for (int i = 0; i < 5; i++)
                             {
@@ -135,6 +136,7 @@ namespace Exercise_3
                             }
 
                             run = true;
+                            Console.Clear();
                             Console.Write("What should the new grade be? ");
                             string newGrade = Console.ReadLine();
                             double gradeCheck = 0;
@@ -155,7 +157,7 @@ namespace Exercise_3
 
                             // Changes the grade for the chosen student in the chosen class and notifies the user a change was made
                             students[studentCheck - 1].GetClasses[classCheck - 1].Grade = gradeCheck;
-                            Console.WriteLine("The grade has been updated. Press any key to continue.");
+                            Console.WriteLine("\nThe grade has been updated. Press any key to continue.");
                             Console.ReadKey();
 
 
