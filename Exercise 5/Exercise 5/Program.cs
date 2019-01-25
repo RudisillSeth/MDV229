@@ -19,13 +19,26 @@ namespace Exercise_5
             //this lets you know the rules and how many rounds there will be
             Console.Write("Let's play Rock, Paper, Scissor, Lizard, Spock.\n" +
                 "\nHow to play" +
-                "\n------------------------------------------------" +
-                "\nAll you have to do is choose one of the options, the computer will choose one at random. Pretty simple right?" +
+                "\n----------------------------------------------------------------------------------------" +
+                "\nAll you have to do is choose one of the options, either type the number or the word." +
+                "\nThe computer will choose one at random." +
                 "\nAfter 10 rounds, the game will end and display the score, think you can win?" +
-                "\nMight help if you know what beats what right? Here you go, they will always be there so you don't forget, good luck." +
-                "\n------------------------------------------------");
+                "\nMight help if you know what beats what right? Here you go" +
+                "\n----------------------------------------------------------------------------------------" +
+                "\nRock crushes scissor and lizard." +
+                "\nPaper covers rock and disproves spock." +
+                "\nscissor cuts paper and kills lizard." +
+                "\nSpock smashes scissor and vaporizes rock." +
+                "\nLizard eats paper and poisons spock." +
+                "\n----------------------------------------------------------------------------------------" +
+                "\nthese will always be there in case you forget, good luck." +
+                "\nPress any key to start." +
+                "\n----------------------------------------------------------------------------------------" +
+                "\n");
+            Console.ReadKey();
             while (count != 10)
             {
+                Console.Clear();
                 //this shows what beats what and will be displayed all the time
                 Console.Write("\nRock crushes scissor and lizard." +
                     "\nPaper covers rock and disproves spock." +
@@ -56,7 +69,7 @@ namespace Exercise_5
 
                 //this makes a random number that the computer uses to make its choice
                 int rNum = new Random().Next(1,6);
-                Console.WriteLine($"Computer chose {options[rNum - 1]}");
+                Console.WriteLine($"\nComputer chose {options[rNum - 1]}");
                 Console.WriteLine(rNum);
 
                 //this takes the user's input and compares it the computer's to see who won

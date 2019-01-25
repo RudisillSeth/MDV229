@@ -12,3 +12,10 @@ c:\users\seth  rudisill\source\repos\Exercise 5\Exercise 5\obj\Debug\Exercise 5.
 \\vmware-host\Shared Folders\Desktop\SethRudisill_CodingExercise5and6\Exercise 5\Exercise 5\obj\Debug\Exercise 5.csproj.CoreCompileInputs.cache
 \\vmware-host\Shared Folders\Desktop\SethRudisill_CodingExercise5and6\Exercise 5\Exercise 5\obj\Debug\Exercise 5.exe
 \\vmware-host\Shared Folders\Desktop\SethRudisill_CodingExercise5and6\Exercise 5\Exercise 5\obj\Debug\Exercise 5.pdb
+\\vmware-host\Shared Folders\Desktop\MDV229\Exercise 5\Exercise 5\bin\Debug\Exercise 5.exe.config
+\\vmware-host\Shared Folders\Desktop\MDV229\Exercise 5\Exercise 5\bin\Debug\Exercise 5.exe
+\\vmware-host\Shared Folders\Desktop\MDV229\Exercise 5\Exercise 5\bin\Debug\Exercise 5.pdb
+\\vmware-host\Shared Folders\Desktop\MDV229\Exercise 5\Exercise 5\obj\Debug\Exercise 5.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\MDV229\Exercise 5\Exercise 5\obj\Debug\Exercise 5.csproj.CoreCompileInputs.cache
+\\vmware-host\Shared Folders\Desktop\MDV229\Exercise 5\Exercise 5\obj\Debug\Exercise 5.exe
+\\vmware-host\Shared Folders\Desktop\MDV229\Exercise 5\Exercise 5\obj\Debug\Exercise 5.pdb
