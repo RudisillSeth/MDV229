@@ -61,7 +61,7 @@ namespace Exercise_5
                 int inputCheck = 0;
 
                 //this makes sure that one of the options was typed in or their respective numbers
-                while (string.IsNullOrWhiteSpace(input) || (int.TryParse(input, out inputCheck) && (inputCheck < 1 || inputCheck > 5)))
+                while ((string.IsNullOrWhiteSpace(input) || ((input != "rock" && input != "paper" && input != "scissor" && input != "lizard" && input != "spock") && !int.TryParse(input, out inputCheck)) || (int.TryParse(input, out inputCheck) && (inputCheck < 1 || inputCheck > 5))))
                 {
                     Console.Write("invalid selection, please try agian. ");
                     input = Console.ReadLine().ToLower();
