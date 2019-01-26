@@ -21,11 +21,15 @@ namespace Exercise_6
                 for (int x = 0; x < 13; x++)
                 {
                     string card = $"{values[x]} of {suits[i]}";
-                    currentDeck.Add(card);
+                    string newCard = Utility.OneLength(card);
+                    currentDeck.Add(newCard);
                 }
             }
 
-            Console.WriteLine("Before we play, we need to name who is playing.");
+            Console.Clear();
+            Console.WriteLine("Welcome to this simple little game of luck. Add in 4 players and, using a standard deck, the computer will shuffle and \ndeal out cards to every player." +
+                " Each card has a value. The number cards have a value equal to their number. \nFace cards are worth 12 points, and aces are 15. Whoever has the most points wins.");
+            Console.WriteLine("\nBefore we play, we need to name who is playing.");
 
             int z = 1;
             //this asks for the names of the players and adds them to the players list
@@ -42,11 +46,14 @@ namespace Exercise_6
                     input = Console.ReadLine();
                 }
 
+                input = $"player {z}: {input}";
+
                 List<string> hand = new List<string> { };
                 Player player = new Player(input, hand);
                 players.Add(player);
                 z++;
             }
+            Console.Clear();
             Console.WriteLine("Great, now I will shuffle and deal cards to everyone.");
             currentDeck = Utility.Shuffle(currentDeck);
 
@@ -62,20 +69,24 @@ namespace Exercise_6
                 players[3].Hand.Add(currentDeck[i]);
             }
 
-            Console.WriteLine("All done, let's see who won." +
-                "\n--------------------------------------");
+            Console.WriteLine("All done, let's see who won. Press any key to continue.");
+            Console.ReadKey();
+            Console.Clear();
+
             int deckScore = 0;
 
             //this displays the players, their cards, and the total score 
+            Console.WriteLine($"  {players[0].Name}      {players[1].Name}     {players[2].Name}     {players[3].Name}" +
+                $"\n+-------------------+-------------------+-------------------+-------------------+");
+            Utility.ShowHand(players[0].Hand, players[1].Hand, players[2].Hand, players[3].Hand);
+            Console.WriteLine("+-------------------+-------------------+-------------------+-------------------+");
+            Console.Write($"| Total Score: {players[0].TotalScore()}  | Total Score: {players[1].TotalScore()}  | Total Score: {players[2].TotalScore()}  | Total Score: {players[3].TotalScore()}  |" +
+                $"\n+-------------------+-------------------+-------------------+-------------------+\n");
             for (int i = 0; i < 4; i++)
             {
-                Console.WriteLine($"{players[i].Name}");
-                Utility.ShowHand(players[i].Hand);
-                Console.WriteLine($"Total Score: {players[i].TotalScore()}");
-                Console.WriteLine("--------------------------------------");
                 deckScore += players[i].TotalScore();
             }
-            Console.WriteLine(deckScore / 2);
+            Console.WriteLine($" Total deck score : {deckScore / 2}");
             Console.ReadKey();
         }
     }

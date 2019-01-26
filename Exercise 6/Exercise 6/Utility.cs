@@ -80,14 +80,32 @@ namespace Exercise_6
         }
 
         //this shows the cards in the players hand
-        public static void ShowHand(List<string> hand)
+        public static void ShowHand(List<string> hand, List<string> hand2, List<string> hand3, List<string> hand4)
         {
             List<string> cards = hand;
+            List<string> cards2 = hand2;
+            List<string> cards3 = hand3;
+            List<string> cards4 = hand4;
 
             for (int i = 0; i < cards.Count(); i++)
             {
-                Console.WriteLine(cards[i]);
+                Console.WriteLine($"| {cards[i]} | {cards2[i]} | {cards3[i]} | {cards4[i]} |");
             }
+        }
+
+        // This takes the string for each card and makes the same length for display
+        public static string OneLength(string card)
+        {
+            List<char> length = card.ToList<char>();
+
+            for (int i = length.Count(); i < 17; i++)
+            {
+                length.Add(' ');
+            }
+            
+            string finalCard = $"{length[0]}{length[1]}{length[2]}{length[3]}{length[4]}{length[5]}{length[6]}{length[7]}{length[8]}" +
+                $"{length[9]}{length[10]}{length[11]}{length[12]}{length[13]}{length[14]}{length[15]}{length[16]}";
+            return finalCard;
         }
     }
 }
